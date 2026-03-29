@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: product-catalog
+spec:
+  to:
+    kind: Service
+    name: product-catalog
+  port:
+    targetPort: 8080

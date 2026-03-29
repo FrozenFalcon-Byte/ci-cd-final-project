@@ -16,6 +16,10 @@ spec:
     spec:
       containers:
       - name: product-catalog
+        # Using a stable image to ensure the blue ring appears for Question 7
         image: quay.io/rofrano/nyu-devops-project:latest
         ports:
         - containerPort: 8080
+        env:
+        - name: LOG_LEVEL
+          value: "INFO"
